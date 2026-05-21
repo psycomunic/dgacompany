@@ -47,13 +47,13 @@ export const HeroSection = () => {
         </div>
 
         {/* Right: CEOs Image */}
-        <div className="w-full lg:w-[45%] max-w-[600px] flex justify-center lg:justify-end relative z-0 mt-10 lg:mt-0">
+        <div className="w-full lg:w-[50%] max-w-[800px] flex justify-center lg:justify-end relative z-0 mt-10 lg:mt-0">
           <FadeIn delay={0.6} y={40} className="w-full flex justify-end">
-            <div className="relative w-full max-w-[500px]">
+            <div className="relative w-full max-w-[700px]">
               <img 
                 src="/ceos.jpg" 
                 alt="CEOs DGA Company" 
-                className="w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(255,94,0,0.15)]"
+                className="w-full h-auto object-contain mix-blend-lighten drop-shadow-[0_0_30px_rgba(255,94,0,0.15)] scale-110 origin-bottom"
                 style={{ 
                   maskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",
                   WebkitMaskImage: "linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)" 
