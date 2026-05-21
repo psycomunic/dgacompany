@@ -4,62 +4,54 @@ import React from "react";
 import { FadeIn } from "../animations/FadeIn";
 import { AnimatedText } from "../animations/AnimatedText";
 import { ContactButton } from "../ui/ContactButton";
+import { Target, TrendingUp, BarChart } from "lucide-react";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="relative min-h-screen px-5 sm:px-8 md:px-10 py-20 bg-[#0C0C0C] flex flex-col justify-center items-center overflow-hidden">
+    <section id="about" className="relative min-h-screen px-6 sm:px-12 lg:px-24 py-24 bg-[#050505] flex flex-col justify-center items-center overflow-hidden">
       
-      {/* Top-left Moon icon */}
-      <FadeIn delay={0.1} duration={0.9} x={-80} y={0} className="absolute top-[4%] left-[1%] sm:left-[2%] md:left-[4%] z-0">
-        <img 
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/moon_icon.11395d36.png" 
-          alt="Moon" 
-          className="w-[120px] sm:w-[160px] md:w-[210px] h-auto object-contain"
-        />
-      </FadeIn>
-
-      {/* Bottom-left 3D object */}
-      <FadeIn delay={0.25} duration={0.9} x={-80} y={0} className="absolute bottom-[8%] left-[3%] sm:left-[6%] md:left-[10%] z-0">
-        <img 
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/p59_1.4659672e.png" 
-          alt="3D element" 
-          className="w-[100px] sm:w-[140px] md:w-[180px] h-auto object-contain"
-        />
-      </FadeIn>
-
-      {/* Top-right Lego icon */}
-      <FadeIn delay={0.15} duration={0.9} x={80} y={0} className="absolute top-[4%] right-[1%] sm:right-[2%] md:right-[4%] z-0">
-        <img 
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/lego_icon-1.703bb594.png" 
-          alt="Lego" 
-          className="w-[120px] sm:w-[160px] md:w-[210px] h-auto object-contain"
-        />
-      </FadeIn>
-
-      {/* Bottom-right 3D group */}
-      <FadeIn delay={0.3} duration={0.9} x={80} y={0} className="absolute bottom-[8%] right-[3%] sm:right-[6%] md:right-[10%] z-0">
-        <img 
-          src="https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7/Group_134-1.2e04f3ce.png" 
-          alt="3D objects group" 
-          className="w-[130px] sm:w-[170px] md:w-[220px] h-auto object-contain"
-        />
-      </FadeIn>
-
-      <div className="relative z-10 flex flex-col items-center max-w-[560px] w-full text-center">
-        <div className="flex flex-col gap-10 sm:gap-14 md:gap-16 w-full items-center">
+      <div className="relative z-10 flex flex-col items-center max-w-5xl w-full text-center">
+        <div className="flex flex-col gap-10 sm:gap-14 w-full items-center">
           <FadeIn delay={0} y={40}>
-            <h2 className="hero-heading font-black uppercase leading-none tracking-tight text-[clamp(3rem,12vw,160px)]">
-              About me
+            <h2 className="hero-heading font-bebas uppercase leading-none tracking-normal text-[clamp(2.5rem,8vw,100px)]">
+              NÃO VENDEMOS MÉTRICAS DE VAIDADE
             </h2>
           </FadeIn>
 
           <AnimatedText 
-            text="With more than five years of experience in design, i focus on branding, web design, and user experience, i truly enjoy working with businesses that aim to stand out and present their best image. Let's build something incredible together!"
-            className="text-[#D7E2EA] font-medium leading-relaxed text-[clamp(1rem,2vw,1.35rem)]"
+            text="A DGA Company atua com exclusividade para Pequenas e Médias Empresas (PMEs). Nossa tese é baseada em apenas um fundamento: o crescimento do seu faturamento real. Não medimos nosso sucesso por likes ou impressões, mas sim pelo impacto tangível no seu caixa e na escalabilidade do seu negócio."
+            className="text-[#FFFFFF]/90 font-montserrat font-medium leading-relaxed text-[clamp(1rem,1.5vw,1.25rem)] max-w-4xl"
           />
         </div>
 
-        <div className="mt-16 sm:mt-20 md:mt-24">
+        {/* Pillars */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 w-full mt-20 sm:mt-24 text-left">
+          <FadeIn delay={0.2} y={30} className="flex flex-col gap-4 border-t-2 border-[#FF5E00]/30 pt-6">
+            <Target className="w-10 h-10 text-[#E100FF]" />
+            <h3 className="font-bebas text-2xl md:text-3xl tracking-widest uppercase">Estratégia Personalizada</h3>
+            <p className="font-montserrat text-[#FFFFFF]/70 text-sm md:text-base leading-relaxed">
+              Mapeamos gargalos, analisamos a jornada do seu cliente e criamos um plano de ataque cirúrgico para aquisição de novos negócios.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.4} y={30} className="flex flex-col gap-4 border-t-2 border-[#FF5E00]/30 pt-6">
+            <TrendingUp className="w-10 h-10 text-[#FF5E00]" />
+            <h3 className="font-bebas text-2xl md:text-3xl tracking-widest uppercase">Performance Implacável</h3>
+            <p className="font-montserrat text-[#FFFFFF]/70 text-sm md:text-base leading-relaxed">
+              Tráfego pago executado com precisão militar. Otimizamos cada centavo investido com foco exclusivo na redução de CAC e aumento de LTV.
+            </p>
+          </FadeIn>
+
+          <FadeIn delay={0.6} y={30} className="flex flex-col gap-4 border-t-2 border-[#FF5E00]/30 pt-6">
+            <BarChart className="w-10 h-10 text-[#E100FF]" />
+            <h3 className="font-bebas text-2xl md:text-3xl tracking-widest uppercase">Escala Validada</h3>
+            <p className="font-montserrat text-[#FFFFFF]/70 text-sm md:text-base leading-relaxed">
+              Decisões baseadas em dados consolidados (BI). Quando encontramos o canal mais rentável, aceleramos o investimento para escalar com previsibilidade.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div className="mt-20 sm:mt-24">
           <ContactButton />
         </div>
       </div>

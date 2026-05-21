@@ -2,57 +2,46 @@
 
 import React from "react";
 import { FadeIn } from "../animations/FadeIn";
-import { Magnet } from "../animations/Magnet";
 import { ContactButton } from "../ui/ContactButton";
 
 export const HeroSection = () => {
   return (
-    <section className="relative h-screen flex flex-col overflow-x-clip bg-[#0C0C0C]">
-      {/* Navbar */}
+    <section className="relative min-h-[90vh] flex flex-col overflow-x-clip bg-[#050505]">
+      {/* Navbar / Header */}
       <FadeIn delay={0} y={-20}>
-        <nav className="flex justify-between items-center px-6 md:px-10 pt-6 md:pt-8 text-[#D7E2EA] font-medium uppercase tracking-wider text-sm md:text-lg lg:text-[1.4rem]">
-          <a href="#about" className="hover:opacity-70 transition-opacity duration-200">About</a>
-          <a href="#price" className="hover:opacity-70 transition-opacity duration-200">Price</a>
-          <a href="#projects" className="hover:opacity-70 transition-opacity duration-200">Projects</a>
-          <a href="#contact" className="hover:opacity-70 transition-opacity duration-200">Contact</a>
-        </nav>
+        <header className="flex justify-between items-center px-6 md:px-12 lg:px-24 pt-8 md:pt-10">
+          <div className="font-bebas text-3xl md:text-4xl tracking-widest uppercase">
+            <span className="hero-heading">DGA</span> Company
+          </div>
+          <nav className="hidden md:flex gap-8 font-montserrat text-sm font-medium uppercase tracking-widest text-[#FFFFFF]/70">
+            <a href="#about" className="hover:text-white transition-colors duration-200">Sobre</a>
+            <a href="#services" className="hover:text-white transition-colors duration-200">Soluções</a>
+            <a href="#projects" className="hover:text-white transition-colors duration-200">Resultados</a>
+          </nav>
+        </header>
       </FadeIn>
 
-      {/* Hero Heading */}
-      <div className="flex-1 flex flex-col justify-center overflow-hidden w-full relative z-20 pointer-events-none mt-6 sm:mt-4 md:-mt-5">
+      {/* Hero Content */}
+      <div className="flex-1 flex flex-col justify-center w-full relative z-20 px-6 md:px-12 lg:px-24 py-20">
         <FadeIn delay={0.15} y={40}>
-          <h1 className="hero-heading font-black uppercase tracking-tight leading-none whitespace-nowrap w-full text-center text-[14vw] sm:text-[15vw] md:text-[16vw] lg:text-[17.5vw]">
-            Hi, i&apos;m jack
+          <h1 className="font-bebas uppercase tracking-normal leading-[0.85] w-full text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8vw] max-w-6xl">
+            ALAVANCAMOS O <br />
+            <span className="hero-heading">FATURAMENTO</span> DA SUA EMPRESA
           </h1>
         </FadeIn>
-      </div>
 
-      {/* Bottom bar */}
-      <div className="flex justify-between items-end px-6 md:px-10 pb-7 sm:pb-8 md:pb-10 relative z-20">
-        <FadeIn delay={0.35} y={20}>
-          <p className="text-[#D7E2EA] font-light uppercase tracking-wide leading-snug text-[clamp(0.75rem,1.4vw,1.5rem)] max-w-[160px] sm:max-w-[220px] md:max-w-[260px]">
-            a 3d creator driven by crafting striking and unforgettable projects
-          </p>
-        </FadeIn>
-        <FadeIn delay={0.5} y={20}>
-          <ContactButton />
-        </FadeIn>
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mt-12 md:mt-16 gap-8">
+          <FadeIn delay={0.35} y={20}>
+            <p className="font-montserrat font-medium text-[#FFFFFF]/80 leading-relaxed text-base sm:text-lg md:text-xl max-w-sm md:max-w-md">
+              Marketing estratégico e implacável focado em escala e aumento de caixa exclusivo para Pequenas e Médias Empresas. Não vendemos métricas de vaidade.
+            </p>
+          </FadeIn>
+          
+          <FadeIn delay={0.5} y={20}>
+            <ContactButton />
+          </FadeIn>
+        </div>
       </div>
-
-      {/* Hero Portrait */}
-      <FadeIn 
-        delay={0.6} 
-        y={30} 
-        className="absolute left-1/2 -translate-x-1/2 z-10 w-[280px] sm:w-[360px] md:w-[440px] lg:w-[520px] top-1/2 -translate-y-1/2 sm:top-auto sm:translate-y-0 sm:bottom-0 pointer-events-auto"
-      >
-        <Magnet padding={150} strength={3}>
-          <img 
-            src="https://shrug-person-78902957.figma.site/_components/v2/d24c01ad3a56fc65e942a1f501eb73db42d7cf9a/Rectangle_40443.81459862.png" 
-            alt="Jack - 3D Creator Portrait" 
-            className="w-full h-auto object-contain"
-          />
-        </Magnet>
-      </FadeIn>
     </section>
   );
 };
