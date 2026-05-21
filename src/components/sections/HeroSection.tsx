@@ -10,8 +10,8 @@ export const HeroSection = () => {
       {/* Navbar / Header */}
       <FadeIn delay={0} y={-20}>
         <header className="flex justify-between items-center px-6 md:px-12 lg:px-24 pt-8 md:pt-10">
-          <div className="font-bebas text-3xl md:text-4xl tracking-widest uppercase">
-            <span className="hero-heading">DGA</span> Company
+          <div className="flex items-center">
+            <img src="/logo.png" alt="DGA Company" className="h-8 md:h-12 lg:h-14 w-auto object-contain" />
           </div>
           <nav className="hidden md:flex gap-8 font-montserrat text-sm font-medium uppercase tracking-widest text-[#FFFFFF]/70">
             <a href="#about" className="hover:text-white transition-colors duration-200">Sobre</a>
